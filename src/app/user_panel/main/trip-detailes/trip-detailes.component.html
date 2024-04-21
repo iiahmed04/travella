@@ -1,0 +1,48 @@
+<div>
+  <div class="CT" [style.background-image]="'url(\'' + trip.image + '\')'">
+    <div class="choosenTrip">
+      <div class="container">
+        <home-navbar></home-navbar>
+        <!-- details home -->
+        <section class="tripDetails py-5 mt-4">
+          <div class="row align-items-end">
+            <div
+              class="col-lg-6 text-lg-start text-center mb-lg-0 mb-5 overflow-hidden"
+            >
+              <h1 class="goBottom">{{ trip.name }}</h1>
+              <p class="mt-5 goRight">
+                {{ trip.description }}
+              </p>
+              <button
+                routerLink="/booking/{{ trip.id }}"
+                class="btn btn-danger mt-2 px-3 goRight"
+              >
+                Book Now
+              </button>
+            </div>
+            <div class="col-lg-6 text-center goLeft">
+              <div class="det mb-4">
+                <h3>Day</h3>
+                <p>{{ trip.day }}</p>
+              </div>
+              <div class="det mb-4">
+                <h3>Return</h3>
+                <p>{{ trip.return }}</p>
+              </div>
+              <div class="det mb-4">
+                <h3>The departure time</h3>
+                <p>{{ trip.theDepTime }}</p>
+              </div>
+              <div class="det mb-4">
+                <h3>Price</h3>
+                <p>{{ trip.price | currency : "USD" }}</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End of details home -->
+      </div>
+      <home-footer></home-footer>
+    </div>
+  </div>
+</div>

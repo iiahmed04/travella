@@ -1,0 +1,109 @@
+{
+  "trips": [
+    {
+      "id": 1,
+      "name": "Parthenon",
+      "image": "./assets/images/trips1.jpg",
+      "price": 1000,
+      "day": "13 March, 2024",
+      "return": "3 days",
+      "theDepTime": "9:00 AM",
+      "description": "Experience the grandeur of Greece's iconic Parthenon with our expert guides. Immerse yourself in history and myth on our tours"
+    },
+    {
+      "name": "Pyramids",
+      "price": 500,
+      "image": "./assets/images/trips3.jpg",
+      "day": "25 April, 2024",
+      "return": "1 days",
+      "theDepTime": "7:00 AM",
+      "description": "Embark on a journey to the timeless wonders of Egypt and behold the majestic Pyramids like never before! Our exclusive travel experience takes you on a captivating adventure through history, guided by expert Egyptologists who unveil the secrets of these ancient marvels.\n",
+      "id": 3
+    },
+    {
+      "name": "dubai",
+      "price": 800,
+      "image": "./assets/images/trip5.jpg",
+      "day": "25 Mai, 2024",
+      "return": "10 days",
+      "theDepTime": "7:00 AM",
+      "description": "Discover Dubai, where luxury meets innovation. Explore the iconic Burj Khalifa, indulge in shopping at Dubai Mall, and wander through the historic Al Fahidi District. Experience thrilling desert safaris and savor culinary delights from around the world. Book your adventure today!",
+      "id": 4
+    },
+    {
+      "name": "Maldives",
+      "price": 100000,
+      "image": "./assets/images/trip4.jpg",
+      "day": "30 December, 2024",
+      "return": "15 days",
+      "theDepTime": "7:00 AM",
+      "description": "Join us for a dreamy trip to the Maldives, where paradise awaits.\n\nRelax on sandy beaches, dive into clear waters, and enjoy thrilling water sports.\n\nWith our expert planning and personalized service, your getaway will be unforgettable.\n\nBook your dream vacation today!",
+      "id": 5
+    },
+    {
+      "name": "Macca",
+      "price": 5000,
+      "image": "./assets/images/trip6.jpg",
+      "day": "25 June, 2024",
+      "return": "22 days",
+      "theDepTime": "5:30 PM",
+      "description": "Experience the Hajj journey with us!\n\nJoin us on a spiritual journey to the Holy Kaaba in Mecca. We specialize in organizing the Hajj, providing excellent services.\nWith expert guidance and attentive service, enjoy a smooth and comfortable Hajj experience. We handle all arrangements, from visas to accommodation and transportation.\n",
+      "id": 6
+    },
+    {
+      "name": "Coliseum",
+      "price": 980,
+      "image": "./assets/images/trips2.jpg",
+      "day": "25 October, 2024",
+      "return": "10 days",
+      "theDepTime": "7:00 AM",
+      "description": "Join us on a captivating journey to Rome's Colosseum! Skip the lines and explore this iconic landmark with expert guides. Hear tales of gladiators and emperors, capture stunning photos, and savor Roman cuisine. Book now and experience the magic of ancient Rome!",
+      "id": 7
+    }
+  ],
+  "booking": [
+    {
+      "tripName": "Macca",
+      "price": 5000,
+      "name": "احمد محمود عبدالوهاب",
+      "phone": "01098663438",
+      "nationalId": 30407012300074,
+      "gender": "male",
+      "birth": "29/6/2004",
+      "nationality": "Egyptian",
+      "id": 6
+    },
+    {
+      "gender": "Gender",
+      "tripName": "Macca",
+      "price": 5000,
+      "name": "ahmed",
+      "phone": "01027003034",
+      "nationalId": 101010101,
+      "birth": "2024-04-04",
+      "nationality": "egyptian",
+      "id": 7
+    },
+    {
+      "gender": "Gender",
+      "tripName": "Coliseum",
+      "price": 980,
+      "name": "a",
+      "nationalId": 123542,
+      "phone": "01027003034",
+      "birth": "2024-04-11",
+      "nationality": "argantina",
+      "id": 8
+    }
+  ],
+  "contact": [],
+  "admin": [
+    {
+      "name": "ahmed mahmoud",
+      "email": "amahmoud607@yahoo.com",
+      "image": "./assets/images/admin.jpg",
+      "password": "123456",
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+<app-navbar></app-navbar>
+<main id="main">
+  <!-- trips page -->
+  <section class="trips py-5" id="trips">
+    <div class="container">
+      <h1 class="px-2 goRight">Available trips</h1>
+      <div class="row text-center">
+        <div class="col-lg-4 col-md-6 mt-4" *ngFor="let trip of trips">
+          <div class="card goTop" style="width: 100%">
+            <img src="{{ trip.image }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ trip.name }}</h5>
+              <p class="card-text">
+                {{ trip.description | slice : 0 : 80 }}...
+              </p>
+              <a
+                routerLink="/tripDetailes/{{ trip.id }}"
+                class="btn btn-primary px-5"
+                >More details</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="my-5 px-2 anim">Some of the activities in our recent trips</h1>
+      <div class="col-12 d-flex flex-wrap py-3 justify-content-between">
+        <div class="col-lg-7 col-12 activities">
+          <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="./assets/images/sometrips1.jpg"
+                  class="d-block w-100 rounded-3"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Hurgada</h5>
+                  <p>
+                    Hurghada's snorkeling promises an enchanting experience in
+                    the Red Sea.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/sometrips2.jpg"
+                  class="d-block w-100 rounded-3"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Greece</h5>
+                  <p>
+                    Parachuting from planes and witnessing the breathtaking
+                    views in a city in Greece.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/sometrips3.jpg"
+                  class="d-block w-100 rounded-3"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Pyramids</h5>
+                  <p>
+                    An exciting tour to the wonders of the world (the Pyramids)
+                    and learning more about the great Pharaonic history
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/sometrips4.jpg"
+                  class="d-block w-100 rounded-3"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Arctic</h5>
+                  <p>
+                    Ice skating in the wonderful Arctic weather and watching
+                    polar bears and penguins.
+                  </p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="./assets/images/sometrips5.jpg"
+                  class="d-block w-100 rounded-3"
+                  alt="..."
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Mount Everest</h5>
+                  <p>
+                    Embark on a unique experience of climbing the highest point
+                    on Earth, Mount Everest
+                  </p>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselExampleFade"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12 overflow-auto comments mt-lg-0 mt-4">
+          <div>
+            <h2 class="text-center py-3">Some customer reviews</h2>
+          </div>
+          <div class="comment">
+            <div class="col-12 px-4 py-2 d-flex">
+              <div class="col-4">
+                <img src="./assets/images/sarah.jpeg" alt="" />
+              </div>
+              <div class="col-8">
+                <p>
+                  <span>Sarah :</span> The trip was amazing! I enjoyed the
+                  experience of standing inside the Colosseum and learning about
+                  its rich history.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="col-12 px-4 py-2 d-flex">
+              <div class="col-4">
+                <img src="./assets/images/john.jpeg" alt="" />
+              </div>
+              <div class="col-8">
+                <p>
+                  <span>John :</span> I highly recommend this tour to anyone
+                  visiting Rome. It was an excellent and informative experience.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="col-12 px-4 py-2 d-flex">
+              <div class="col-4">
+                <img src="./assets/images/emily.jpeg" alt="" />
+              </div>
+              <div class="col-8">
+                <p>
+                  <span>Emily :</span> The guides were excellent and helpful.
+                  Thanks for this wonderful trip!
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="col-12 px-4 py-2 d-flex">
+              <div class="col-4">
+                <img src="./assets/images/Michael.jpeg" alt="" />
+              </div>
+              <div class="col-8">
+                <p>
+                  <span>Michael :</span> Visiting the Colosseum was a dream come
+                  true! The guides made it so engaging and memorable.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="col-12 px-4 py-2 d-flex">
+              <div class="col-4">
+                <img src="./assets/images/jessica.jpeg" alt="" />
+              </div>
+              <div class="col-8">
+                <p>
+                  <span>Jessica :</span> Absolutely breathtaking! The sheer size
+                  and history of the Colosseum left me in awe.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="col-12 px-4 py-2 d-flex">
+              <div class="col-4">
+                <img src="./assets/images/David.jpeg" alt="" />
+              </div>
+              <div class="col-8">
+                <p>
+                  <span>David :</span> A must-do experience in Rome! The tour
+                  was well-organized, and the guides were fantastic.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="col-12 px-4 py-2 d-flex">
+              <div class="col-4">
+                <img src="./assets/images/maria.jpeg" alt="" />
+              </div>
+              <div class="col-8">
+                <p>
+                  <span>Maria :</span> An unforgettable journey back in time!
+                  Walking through the Colosseum was like stepping into history
+                  books.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="col-12 px-4 py-2 d-flex">
+              <div class="col-4">
+                <img src="./assets/images/mia.jpeg" alt="" />
+              </div>
+              <div class="col-8">
+                <p>
+                  <span>Mia :</span> Incredible views and fascinating stories! I
+                  couldn't have asked for a better way to explore ancient Rome.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="comment">
+            <div class="col-12 px-4 py-2 d-flex">
+              <div class="col-4">
+                <img src="./assets/images/olivia.jpeg" alt="" />
+              </div>
+              <div class="col-8">
+                <p>
+                  <span>Olivia :</span> The Colosseum tour was the highlight of
+                  our trip to Rome! We were spellbound by its grandeur and the
+                  tales of ancient gladiators
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of trips page -->
+</main>
+<app-footer></app-footer>

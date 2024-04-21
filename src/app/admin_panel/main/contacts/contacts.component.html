@@ -1,0 +1,42 @@
+<admin-navbar></admin-navbar>
+<main id="main">
+  <section class="contactsList py-2" id="contactsList">
+    <div class="container-fluid">
+      <div class="listOfcontacts p-md-5">
+        <h1 class="mb-4">Contacts</h1>
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">Subject</th>
+                <th colspan="4" scope="col">Message</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr *ngFor="let contact of contacts">
+                <th scope="row">{{ contact.id }}</th>
+                <td>{{ contact.name }}</td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.phone }}</td>
+                <td>{{ contact.subject }}</td>
+                <td colspan="4">
+                  {{ contact.message }}
+                </td>
+                <td>
+                  <a (click)="remove(contact.id)" class="btn btn-danger col-12"
+                    >Delete</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

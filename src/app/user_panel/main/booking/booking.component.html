@@ -1,0 +1,220 @@
+<app-navbar></app-navbar>
+<main id="main">
+  <!-- Boking page -->
+  <section class="booking py-5 goTop" id="booking">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-12 mb-5">
+          <form class="p-4 d-flex flex-wrap">
+            <div *ngIf="message" class="alert alert-success col-12">
+              {{ message }}
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Full Name"
+                required
+                #name="ngModel"
+                name="name"
+                [(ngModel)]="book.name"
+                [style.border]="
+                  name.invalid && name.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="name.invalid && name.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Phone Number"
+                required
+                #phone="ngModel"
+                name="phone"
+                [(ngModel)]="book.phone"
+                [style.border]="
+                  phone.invalid && phone.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="phone.invalid && phone.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="number"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="National ID"
+                required
+                #nationalId="ngModel"
+                name="nationalId"
+                [(ngModel)]="book.nationalId"
+                [style.border]="
+                  nationalId.invalid && nationalId.touched
+                    ? '3px solid red'
+                    : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="nationalId.invalid && nationalId.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <select
+                type="text"
+                class="form-select py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-label="Default select example"
+                required
+                #gender="ngModel"
+                name="gender"
+                [(ngModel)]="book.gender"
+                [style.border]="
+                  gender.invalid && gender.touched ? '3px solid red' : ''
+                "
+              >
+                <option value="Gender" selected disabled>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+              <span
+                class="text-danger fs-6"
+                *ngIf="gender.invalid && gender.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="date"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Date of birth"
+                required
+                #birth="ngModel"
+                name="birth"
+                [(ngModel)]="book.birth"
+                [style.border]="
+                  birth.invalid && birth.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="birth.invalid && birth.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Nationality"
+                required
+                #nationality="ngModel"
+                name="nationality"
+                [(ngModel)]="book.nationality"
+                [style.border]="
+                  nationality.invalid && nationality.touched
+                    ? '3px solid red'
+                    : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="nationality.invalid && nationality.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Trip Name"
+                disabled
+                #tripName="ngModel"
+                name="tripName"
+                [(ngModel)]="book.tripName"
+                [style.border]="
+                  tripName.invalid && tripName.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="tripName.invalid && tripName.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Toatal Price"
+                disabled
+                #price="ngModel"
+                name="price"
+                [(ngModel)]="book.price"
+                [style.border]="
+                  price.invalid && price.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="price.invalid && price.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="col-12 text-center p-4">
+              <button
+                class="btn px-5 py-2 fs-4"
+                [disabled]="
+                  name.invalid ||
+                  phone.invalid ||
+                  nationalId.invalid ||
+                  gender.invalid ||
+                  birth.invalid ||
+                  nationality.invalid ||
+                  tripName.invalid ||
+                  price.invalid
+                "
+                (click)="submit()"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of Booking page -->
+</main>
+<app-footer></app-footer>

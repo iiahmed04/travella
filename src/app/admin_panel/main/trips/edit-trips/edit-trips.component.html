@@ -1,0 +1,195 @@
+<admin-navbar></admin-navbar>
+<!-- Edit trip page -->
+<main id="main">
+  <section class="addTrip py-5" id="addTrip">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-12 mb-5">
+          <h2 class="mb-3 px-2">Edit TRIP</h2>
+          <form class="p-4 d-flex flex-wrap">
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Trip Name"
+                required
+                #name="ngModel"
+                name="name"
+                [(ngModel)]="trip.name"
+                [style.border]="
+                  name.invalid && name.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="name.invalid && name.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="number"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Price($)"
+                name="price"
+                required
+                #price="ngModel"
+                [(ngModel)]="trip.price"
+                [style.border]="
+                  price.invalid && price.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="price.invalid && price.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Image URL"
+                name="image"
+                required
+                #image="ngModel"
+                [(ngModel)]="trip.image"
+                [style.border]="
+                  image.invalid && image.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="image.invalid && image.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Day"
+                name="day"
+                required
+                #day="ngModel"
+                [(ngModel)]="trip.day"
+                [style.border]="
+                  day.invalid && day.touched ? '3px solid red' : ''
+                "
+              />
+              <span class="text-danger fs-6" *ngIf="day.invalid && day.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Return"
+                name="return"
+                required
+                #return="ngModel"
+                [(ngModel)]="trip.return"
+                [style.border]="
+                  return.invalid && return.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="return.invalid && return.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="The departure time"
+                name="theDepTime"
+                required
+                #theDepTime="ngModel"
+                [(ngModel)]="trip.theDepTime"
+                [style.border]="
+                  theDepTime.invalid && theDepTime.touched
+                    ? '3px solid red'
+                    : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="theDepTime.invalid && theDepTime.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-12 px-md-4 px-1 mt-3">
+              <div class="form-floating">
+                <textarea
+                  class="form-control py-md-4 py-3 bg-body-secondary"
+                  placeholder="Leave a comment here"
+                  required
+                  name="description"
+                  id="floatingTextarea2"
+                  style="height: 300px"
+                  #description="ngModel"
+                  [(ngModel)]="trip.description"
+                  [style.border]="
+                    description.invalid && description.touched
+                      ? '3px solid red'
+                      : ''
+                  "
+                ></textarea>
+                <span
+                  class="text-danger fs-6"
+                  *ngIf="description.invalid && description.touched"
+                  >*This is required field</span
+                >
+                <label for="floatingTextarea">Description</label>
+              </div>
+            </div>
+            <div class="col-12 text-center p-4">
+              <button
+                class="btn px-5 py-2 fs-6 mx-2"
+                [disabled]="
+                  name.invalid ||
+                  price.invalid ||
+                  image.invalid ||
+                  day.invalid ||
+                  return.invalid ||
+                  theDepTime.invalid ||
+                  description.invalid
+                "
+                (click)="update()"
+              >
+                Update
+              </button>
+              <a
+                routerLink="/admin/trips/list"
+                class="btn px-5 py-2 fs-6 cancel"
+                >Cancel</a
+              >
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- End of add trip page -->

@@ -1,0 +1,70 @@
+<div class="signIn flex-wrap" id="signIn">
+  <div
+    class="leftHalf goRight col-lg-7 col-md-6 col-sm-5 order-sm-1 order-2 align-content-center"
+  >
+    <img class="img-fluid goRight" src="./assets/images/sign in.png" alt="" />
+  </div>
+  <div
+    class="rightHalf goLeft col-lg-5 col-md-6 col-sm-7 col-12 order-sm-2 order-1 d-flex flex-column text-center justify-content-around"
+  >
+    <div class="mb-md-0 mb-4">
+      <h1 class="goLeft"><span>T</span>RAVELLA<span>.</span></h1>
+    </div>
+    <div>
+      <form class="goLeft">
+        <div
+          class="register mb-md-0 mb-4 p-4 col-sm-9 col-11 m-auto border border-light-subtle rounded-4"
+        >
+          <div *ngIf="message" class="alert alert-danger">
+            {{ message }}
+          </div>
+          <h1>SIGN IN</h1>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"></label>
+            <input
+              type="email"
+              class="form-control py-3"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              placeholder="Email Address"
+              #email="ngModel"
+              name="email"
+              [(ngModel)]="admin.email"
+              [style.border]="
+                email.invalid && email.touched ? '3px solid red' : ''
+              "
+            />
+            <span
+              class="text-danger fs-6"
+              *ngIf="email.invalid && email.touched"
+              >*This is required field</span
+            >
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"></label>
+            <input
+              type="password"
+              class="form-control py-3"
+              id="exampleInputPassword1"
+              placeholder="Password"
+              #password="ngModel"
+              name="password"
+              [(ngModel)]="admin.password"
+              [style.border]="
+                password.invalid && password.touched ? '3px solid red' : ''
+              "
+            />
+            <span
+              class="text-danger fs-6"
+              *ngIf="password.invalid && password.touched"
+              >*This is required field</span
+            >
+          </div>
+          <button type="submit" class="btn py-2 px-4" (click)="submit()">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

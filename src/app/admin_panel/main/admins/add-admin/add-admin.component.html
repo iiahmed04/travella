@@ -1,0 +1,118 @@
+<admin-navbar></admin-navbar>
+<!-- add Admin page -->
+<main id="main">
+  <section class="addAdmin py-5" id="addAdmin">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-12 mb-5">
+          <h2 class="mb-3 px-2">ADD Admin</h2>
+          <form class="p-4 d-flex flex-wrap">
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Full Name"
+                required
+                #name="ngModel"
+                name="name"
+                [(ngModel)]="admin.name"
+                [style.border]="
+                  name.invalid && name.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="name.invalid && name.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="email"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Email Address"
+                required
+                #email="ngModel"
+                name="email"
+                [(ngModel)]="admin.email"
+                [style.border]="
+                  email.invalid && email.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="email.invalid && email.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Image URL"
+                required
+                #image="ngModel"
+                name="image"
+                [(ngModel)]="admin.image"
+                [style.border]="
+                  image.invalid && image.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="image.invalid && image.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3 col-md-6 col-12 px-md-4 px-1">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-md-4 py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Password"
+                required
+                #password="ngModel"
+                name="password"
+                [(ngModel)]="admin.password"
+                [style.border]="
+                  password.invalid && password.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="password.invalid && password.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="col-12 text-center p-4">
+              <button
+                class="btn px-5 py-2 fs-4"
+                [disabled]="
+                  name.invalid ||
+                  email.invalid ||
+                  image.invalid ||
+                  password.invalid
+                "
+                (click)="submit()"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<!-- End of add Admin page -->

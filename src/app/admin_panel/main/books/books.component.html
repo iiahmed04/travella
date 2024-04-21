@@ -1,0 +1,46 @@
+<admin-navbar></admin-navbar>
+<main id="main">
+  <section class="booksList py-2" id="booksList">
+    <div class="container-fluid">
+      <div class="listOfBooks p-md-5">
+        <h1 class="mb-4">BOOKS</h1>
+        <div class="table-responsive">
+          <table class="table">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Full Name</th>
+                <th scope="col">Phone Number</th>
+                <th scope="col">National Id</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Nationality</th>
+                <th scope="col">Date of Birth</th>
+                <th scope="col">Trip Name</th>
+                <th scope="col">Total price ($)</th>
+                <th scope="col">Delete</th>
+              </tr>
+            </thead>
+            <tbody class="table-group-divider">
+              <tr *ngFor="let book of books">
+                <th scope="row">{{ book.id }}</th>
+                <td>{{ book.name }}</td>
+                <td>{{ book.phone }}</td>
+                <td>{{ book.nationalId }}</td>
+                <td>{{ book.gender }}</td>
+                <td>{{ book.birth }}</td>
+                <td>{{ book.nationality }}</td>
+                <td>{{ book.tripName }}</td>
+                <td>{{ book.price }}</td>
+                <td>
+                  <a (click)="remove(book.id)" class="btn btn-danger col-12"
+                    >Delete</a
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

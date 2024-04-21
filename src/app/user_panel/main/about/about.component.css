@@ -1,0 +1,61 @@
+/* animation */
+.goRight{
+  animation-name: goRight;
+  animation-duration: 1.7s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+@keyframes goRight {
+  0%{
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.goLeft{
+  animation-name: goLeft;
+  animation-duration: 1.7s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+@keyframes goLeft {
+  0%{
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100%{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.goTop{
+  animation-name: goTop;
+  animation-duration: 1.2s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+@keyframes goTop {
+  0%{
+    transform: translateY(800px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+.goBottom{
+  animation-name: goBottom;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+}
+@keyframes goBottom {
+  0%{
+    transform: translateY(-800px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}

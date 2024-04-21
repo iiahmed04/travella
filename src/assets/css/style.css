@@ -1,0 +1,855 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  scroll-behavior: smooth ;
+
+}
+body{
+  overflow-x: hidden;
+}
+
+:root {
+  --main-color: #b7303b;
+  --black-color: #707070;
+  --cardgs-bg: #eaeaea;
+  --newsletter-bg: #d3d3d3;
+}
+
+/* home page */
+.home {
+  background-image: url(../images/homeBg.jpg);
+  background-size: cover;
+}
+
+/* navbar of home */
+.navbar a span {
+  font-weight: bold;
+  font-size: 38px;
+  color: var(--main-color);
+}
+
+.nav-item a {
+  color: white;
+  font-size: 17px;
+}
+
+.nav-item a:hover {
+  color: #b7303b;
+}
+
+@media(max-width:992px){
+  .home .nav-item a{
+    color: var(--main-color);
+  }
+}
+
+.login {
+  background-color: var(--main-color);
+  color: white;
+  border: none;
+  padding: 5px 50px;
+  border-radius: 8px;
+  box-shadow: 0 8px 28px #b7303b;
+  transition: all 0.5s;
+}
+
+.login:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #b7303b;
+
+}
+/* End of navbar of home */
+
+
+.hero .row {
+  height: 450px;
+  align-content: space-around;
+}
+
+.hero .row .des h1 {
+  font-size: 60px;
+  color: white;
+}
+
+.hero .row .des p {
+  font-size: 30px;
+  color: white;
+}
+
+.bookBtn {
+  width: 180px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  transition: all 0.5s ease-in-out;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  background-image: linear-gradient(to right, #b7303b, #c44950, #d06066, #dc757b, #e68b91);
+  color: #f5f5f5;
+
+  color: #f5f5f5;
+}
+
+.bookBtn .icon {
+  position: absolute;
+  height: 40px;
+  width: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+}
+
+.bookBtn .text {
+  transform: translateX(55px);
+}
+
+.bookBtn:hover .icon {
+  width: 175px;
+}
+
+.bookBtn:hover .text {
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.bookBtn:focus {
+  outline: none;
+}
+
+.bookBtn:active .icon {
+  transform: scale(0.85);
+}
+
+/* footer of home */
+footer .container .row a span {
+  font-weight: bold;
+  font-size: 38px;
+  color: var(--main-color);
+}
+footer .socials a i{
+  font-size: 28px;
+  padding:0 5px;
+  color: white;
+}
+.line hr {
+  border: 4px solid #b7303b;
+  opacity: 0.6;
+  margin: 0;
+}
+
+footer p {
+  color: #d3d3d3;
+}
+
+footer h4 {
+  color: #b7303b;
+  font-weight: bold;
+}
+
+.quickLinks a {
+  text-decoration: none;
+  color: #d3d3d3;
+  display: block;
+  padding: 2.5px 0;
+  transition: all 0.5s;
+}
+.quickLinks a:hover{
+  color: white;
+}
+
+.newLetters h5 {
+  color: #b7303b;
+  font-weight: bold;
+}
+
+.inputNews {
+  background-color: #d3d3d3;
+  opacity: 0.5;
+  padding: 10px;
+}
+
+.newLetters .btn {
+  background-color: #b7303b;
+  color: white;
+}
+.footerIcon{
+  color: var(--main-color);
+  font-size: 20px;
+}
+.maker {
+  text-decoration: none;
+  color: var(--main-color);
+  font-weight: bold;
+}
+@media (max-width:500px) {
+  footer .socials a i{
+    font-size: 19.5px;
+    padding:0 2px;
+  }
+
+}
+/* End of footer of home */
+
+/* about to contact us */
+/* shard nav bar */
+header{
+  height: 270px;
+  background-image: url(../images/navBg.jpg);
+  background-size: cover;
+  position: relative;
+}
+header .nav-item a{
+  color: var(--main-color);
+}
+header .navbar-collapse{
+  background-color: transparent !important;
+}
+@media(max-width:992px){
+  header .navbar-collapse{
+    background-color: white !important;
+    z-index: 4;
+  }
+}
+/* end of shared navbar */
+
+/* about */
+.address{
+  position: absolute;
+  bottom: 50px;
+}
+.address h1{
+  font-size: 70px;
+  color: var(--main-color);
+}
+.address p{
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.address p a{
+  text-decoration: none;
+  color: white;
+}
+.world{
+  box-shadow: 15px 15px var(--main-color);
+}
+.aboutText h2{
+
+  color: var(--main-color);
+}
+.aboutText p{
+  font-size: 20px;
+  color: var(--black-color);
+}
+.whyUs h1{
+  border-left: 8px solid var(--main-color);
+  color: var(--main-color);
+}
+.whyUs h5{
+  color: var(--black-color);
+}
+.whyUs .oneToFive h2{
+  font-size: 45px;
+}
+.whyUs .oneToFive p{
+  font-size: 20px;
+  color: var(--black-color);
+}
+@media (max-width:1200px) {
+  .aboutText p{
+    font-size: 18px;
+  }
+}
+@media (max-width:992px) {
+  .aboutText p{
+    font-size: 16px;
+  }
+
+}
+@media (max-width:575px) {
+  .aboutText p{
+    font-size: 12px;
+  }
+  .world{
+    box-shadow: none;
+  }
+  .whyUs .oneToFive h2{
+    font-size: 30px;
+  }
+  .whyUs .oneToFive p{
+    font-size: 15px;
+    color: var(--black-color);
+  }
+}
+/* end of about */
+
+/* trips */
+.trips .card{
+  border-radius: 0;
+  transition: all 0.5s;
+}
+.trips .card:hover{
+  transform:scale(1.05);
+}
+.trips .card img{
+  border-radius: 0%;
+}
+.trips h1{
+  font-size: 40px;
+  font-weight: bold;
+  border-left:10px solid var(--main-color);
+  color: var(--main-color);
+
+}
+@media (max-width:500px) {
+  .trips h1{
+    font-size: 30px;
+  }
+}
+.trips .btn{
+  border: none;
+  background-color: var(--main-color);
+  transition: all 0.5s;
+}
+.trips .btn:hover{
+  color: var(--main-color);
+  background-color: white;
+  border: 1px solid var(--main-color);
+}
+.comments{
+  height: 505px;
+  border: 3px solid var(--main-color);
+  border-radius: 5px;
+}
+.comment{
+  border-top: 2px solid var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+.comment img{
+  width: 85px;
+  border-radius: 50%;
+}
+.comments h2{
+  color: var(--main-color);
+  font-weight: 700;
+}
+.comment p{
+  font-size: 14px;
+  font-weight: 600;
+}
+@media (max-width:500px) {
+  .comment img{
+    width: 65px;
+    border-radius: 50%;
+  }
+  .comment p{
+    font-size: 12px;
+
+  }
+}
+.comment p span{
+  font-weight:900;
+}
+.comments .card:hover{
+  transform:none;
+}
+
+/* width */
+.comments::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.comments::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+.comments::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+.comments::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+/* end of trips */
+
+/* contact us */
+.contactUs form{
+  border-top: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.29);
+}
+.contactUs form .btn{
+  background-color: var(--main-color);
+  color: white;
+  transition: all 0.5s;
+}
+.contactUs form .btn:hover{
+  color: var(--main-color);
+  background-color: white;
+  border: 1px solid var(--main-color);
+}
+.locations{
+  border-top: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.29);
+}
+.locations p{
+  color: var(--black-color);
+}
+.locations i{
+  font-size: 32px;
+  float: right;
+}
+.locations .fa-location-dot {
+  margin-right: 21px;
+}
+/* end of contact us */
+
+/* shared footer */
+.sharedFooter{
+  background-color: var(--main-color);
+}
+.sharedFooter h4 {
+  color: white;
+  font-weight: bold;
+}
+.sharedFooter .footerIcon{
+  color: white;
+  font-size: 20px;
+}
+.sharedFooter .line hr {
+  border: 4px solid white;
+  opacity: 0.6;
+  margin: 0;
+}
+.sharedFooter .newLetters h5{
+  color: white;
+}
+.sharedFooter .maker a{
+  color: white;
+}
+/* end of shared footer */
+
+/* sign in */
+.signIn{
+  display: flex;
+  height: 100vh;
+}
+.signIn .leftHalf{
+  background-color: var(--main-color);
+}
+.signIn .rightHalf h1{
+  font-size: 50px;
+}
+.signIn .rightHalf h1 span{
+  font-weight: bold;
+  font-size: 60px;
+  color: var(--main-color);
+}
+.register h1{
+  color: var(--main-color);
+}
+.register .btn{
+  color: white;
+  background-color: var(--main-color);
+  transition: all 0.5s;
+}
+.register .btn:hover{
+  color:var(--main-color);
+  background-color: white ;
+  border: 1px solid var(--main-color);
+}
+@media (max-width:575px) {
+  .signIn .rightHalf h1 span{
+    font-size: 40px;
+  }
+  .signIn .rightHalf h1{
+    font-size: 30px;
+  }
+}
+/* End of sign in */
+
+/* choosen trip page */
+.CT{
+  background-size: cover;
+}
+.choosenTrip{
+  height: 100%;
+  background-color: rgba(25, 25, 25, 0.7);
+  color: white;
+}
+.tripDetails h1{
+  font-weight: bold;
+  font-size: 80px;
+}
+.tripDetails p{
+  font-size:  22px;
+}
+.det p{
+  font-size: 16px;
+}
+@media (max-width:575px) {
+  .tripDetails h1{
+    font-weight: bold;
+    font-size: 55px;
+  }
+  .tripDetails p{
+    font-size:  18px;
+  }
+}
+
+/* End of choosen trip page */
+
+/* booking page */
+
+.booking form{
+  border-top: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.29);
+}
+.booking form .btn{
+  background-color: var(--main-color);
+  color: white;
+  transition: all 0.5s;
+}
+.booking form .btn:hover{
+  color: var(--main-color);
+  background-color: white;
+  border: 1px solid var(--main-color);
+}
+.navbar-collapse{
+  background-color: transparent !important;
+}
+@media(max-width:992px){
+  .navbar-collapse{
+    background-color: white !important;
+    z-index: 4;
+  }
+}
+
+/* End of booking page */
+
+/* ===== admin pages ===== */
+
+/* dashboared */
+
+/* Admin navbar */
+.adminNav button{
+  background-color: var(--main-color);
+  color: white;
+  transition: all 0.5s;
+}
+.adminNav .dropdown a{
+  color: rgba(0,0,0,0.65);
+}
+.adminNav button:hover{
+  background-color: white;
+  color: var(--main-color);
+  border: 1px solid var(--main-color);
+}
+.logoAdmin h2 {
+  font-size: 40px;
+}
+.logoAdmin h2 span {
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+/* End of Admin navbar */
+
+.welcomeAdmin{
+  height: 500px;
+}
+.welcomeAdmin h1{
+  font-weight: bold;
+  font-size: 85px;
+}
+.welcomeAdmin h1 span{
+  color: var(--main-color);
+}
+.welcomeAdmin img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #707070;
+}
+@media (max-width:400px) {
+  .welcomeAdmin h1{
+    font-size: 60px;
+  }
+  .welcomeAdmin img{
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+  }
+}
+/* End of dashboared */
+
+/* add trip page */
+
+.addTrip form{
+  border-top: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.29);
+}
+.addTrip form .btn{
+  background-color: var(--main-color);
+  color: white;
+  transition: all 0.5s;
+}
+.addTrip form .btn:hover{
+  color: var(--main-color);
+  background-color: white;
+  border: 1px solid var(--main-color);
+}
+.addTrip h2{
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+@media (max-width:400px) {
+  .addTrip h2{
+    font-size: 45px;
+  }
+}
+
+/* End of add trip page */
+
+/* edit trip page */
+
+.editTrip form{
+  border-top: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.29);
+}
+.editTrip form .btn{
+  background-color: var(--main-color);
+  color: white;
+  transition: all 0.5s;
+}
+.editTrip form .btn:hover{
+  color: var(--main-color);
+  background-color: white;
+  border: 1px solid var(--main-color);
+}
+
+.editTrip h2{
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+@media (max-width:400px) {
+  .editTrip h2{
+    font-size: 41px;
+  }
+}
+/* End of edit trip page */
+
+/* trip list page */
+.tripsList .card{
+  border-radius: 0;
+}
+.tripsList .card img{
+  border-radius: 0%;
+}
+.tripsList .btn{
+  border: none;
+  background-color: var(--main-color);
+  transition: all 0.5s;
+}
+.tripsList .btn:hover{
+  background-color: #87161f;
+}
+.btnss .edit{
+  border: 1px solid var(--main-color);
+  background-color: white;
+  color: var(--main-color);
+  transition: all 0.5s;
+}
+.btnss .edit:hover{
+  background-color: rgb(254, 244, 244);
+}
+.tripsList h2{
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+@media (max-width:400px) {
+  .tripsList h2{
+    font-size: 41px;
+  }
+}
+
+/* End of trip list page */
+
+/* add Admin page */
+
+.addAdmin form{
+  border-top: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.29);
+}
+.addAdmin form .btn{
+  background-color: var(--main-color);
+  color: white;
+  transition: all 0.5s;
+}
+.addAdmin form .btn:hover{
+  color: var(--main-color);
+  background-color: white;
+  border: 1px solid var(--main-color);
+}
+.addAdmin h2{
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+@media (max-width:400px) {
+  .addAdmin h2{
+    font-size: 45px;
+  }
+}
+
+/* End of add admin page */
+
+/* edit Admin page */
+
+.editAdmin form{
+  border-top: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.29);
+}
+.editAdmin form .btn{
+  background-color: var(--main-color);
+  color: white;
+  transition: all 0.5s;
+}
+
+.editAdmin form .btn:hover{
+  color: var(--main-color);
+  background-color: white;
+  border: 1px solid var(--main-color);
+}
+.editAdmin h2{
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+@media (max-width:400px) {
+  .editAdmin h2{
+    font-size: 45px;
+  }
+}
+
+/* End of edit admin page */
+
+/* admin list page */
+.adminList .card{
+  border-radius: 0;
+}
+.adminList .card img{
+  border-radius: 0%;
+  width: 50%;
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.adminList .btn{
+  border: none;
+  background-color: var(--main-color);
+  transition: all 0.5s;
+}
+.adminList .btn:hover{
+  background-color: #87161f;
+}
+.btnss .edit{
+  border: 1px solid var(--main-color);
+  background-color: white;
+  color: var(--main-color);
+  transition: all 0.5s;
+}
+.btnss .edit:hover{
+  background-color: rgb(254, 244, 244);
+}
+.adminList h2{
+  font-weight: bold;
+  font-size: 50px;
+  color: var(--main-color);
+}
+@media (max-width:400px) {
+  .adminList h2{
+    font-size: 41px;
+  }
+}
+
+/* End of admin list page */
+
+/* books list page */
+.booksList{
+  background-color: var(--cardgs-bg);
+  width: 95%;
+  margin: auto;
+  border-top: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.29);
+  border-radius: 10px;
+}
+.booksList h1{
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 50px;
+}
+.listOfBooks{
+  overflow-x: scroll;
+}
+@media(max-width:500px){
+  .booksList h1{
+    font-size: 30px;
+  }
+  .table{
+    font-size: 12px;
+  }
+}
+
+/* end of booklist page */
+
+/* contacts list page */
+.contactsList{
+  background-color: var(--cardgs-bg);
+  width: 95%;
+  margin: auto;
+  border-top: 3px solid var(--main-color);
+  border-bottom: 3px solid var(--main-color);
+  box-shadow: 0px 0px 16px 4px rgba(0,0,0,0.29);
+  border-radius: 10px;
+}
+.contactsList h1{
+  font-weight: bold;
+  color: var(--main-color);
+  font-size: 50px;
+}
+.listOfcontacts{
+  overflow-x: scroll;
+}
+@media(max-width:500px){
+  .contactsList h1{
+    font-size: 30px;
+  }
+  .table{
+    font-size: 12px;
+  }
+}
+
+/* end of booklist page */
+
+

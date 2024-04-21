@@ -1,0 +1,172 @@
+<app-navbar></app-navbar>
+<main id="main">
+  <!-- contact us page -->
+  <section class="contactUs py-5" id="contactUs">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-md-6 mb-md-0 mb-5">
+          <form class="p-4 goRight">
+            <div *ngIf="success" class="alert alert-success col-12">
+              {{ success }}
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Full Name"
+                required
+                #name="ngModel"
+                name="name"
+                [(ngModel)]="contact.name"
+                [style.border]="
+                  name.invalid && name.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="name.invalid && name.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="email"
+                class="form-control py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Email address"
+                required
+                #email="ngModel"
+                name="email"
+                [(ngModel)]="contact.email"
+                [style.border]="
+                  email.invalid && email.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="email.invalid && email.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Phone Number"
+                required
+                #phone="ngModel"
+                name="phone"
+                [(ngModel)]="contact.phone"
+                [style.border]="
+                  phone.invalid && phone.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="phone.invalid && phone.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label"></label>
+              <input
+                type="text"
+                class="form-control py-3 bg-body-secondary"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Subject"
+                required
+                #subject="ngModel"
+                name="subject"
+                [(ngModel)]="contact.subject"
+                [style.border]="
+                  subject.invalid && subject.touched ? '3px solid red' : ''
+                "
+              />
+              <span
+                class="text-danger fs-6"
+                *ngIf="subject.invalid && subject.touched"
+                >*This is required field</span
+              >
+            </div>
+            <div class="mb-3">
+              <div class="form-floating">
+                <textarea
+                  class="form-control bg-body-secondary"
+                  placeholder="Leave a comment here"
+                  id="floatingTextarea2"
+                  style="height: 100px"
+                  required
+                  #message="ngModel"
+                  name="message"
+                  [(ngModel)]="contact.message"
+                  [style.border]="
+                    message.invalid && message.touched ? '3px solid red' : ''
+                  "
+                ></textarea>
+                <span
+                  class="text-danger fs-6"
+                  *ngIf="message.invalid && message.touched"
+                  >*This is required field</span
+                >
+                <label for="floatingTextarea">Message</label>
+              </div>
+            </div>
+            <div class="col-12 text-center">
+              <button
+                class="btn px-5"
+                [disabled]="
+                  name.invalid ||
+                  email.invalid ||
+                  phone.invalid ||
+                  subject.invalid ||
+                  message.invalid
+                "
+                (click)="submit()"
+              >
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+        <div
+          class="col-md-6 mb-md-0 mb-5 locations p-5 d-flex flex-column goLeft"
+        >
+          <div class="">
+            <h3 class="d-inline">Address</h3>
+            <i class="fa-solid fa-location-dot footerIcon"></i>
+            <p>Cairo - 140 Elsalam st.</p>
+          </div>
+          <div class="">
+            <h3 class="d-inline">Email Address</h3>
+            <i class="fa-solid fa-envelope me-3 footerIcon"></i>
+            <p>info@travella.com</p>
+          </div>
+          <div class="">
+            <h3 class="d-inline">Phone Number</h3>
+            <i class="fa-solid fa-phone me-3 footerIcon"></i>
+            <p>+201098663438</p>
+          </div>
+          <div class="col-12">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111331.89863047743!2d30.99509410273438!3d29.30810169999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1459792ebabd6a35%3A0xae264c24bfd154c5!2z2KfZhNi02LHZg9ipINin2YTZhdi12LHZitipINmE2YTYp9iq2LXYp9mE2KfYqiAod2Up!5e0!3m2!1sar!2seg!4v1701199355314!5m2!1sar!2seg"
+              frameborder="0"
+              width="100%"
+              height="265px"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of contact us page -->
+</main>
+<app-footer></app-footer>

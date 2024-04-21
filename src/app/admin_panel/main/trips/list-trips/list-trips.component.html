@@ -1,0 +1,33 @@
+<admin-navbar></admin-navbar>
+<main id="main">
+  <section class="tripsList py-5" id="tripsList">
+    <div class="container">
+      <div class="row text-center">
+        <h2 class="text-start mb-3 px-2">Trips list</h2>
+        <div class="col-lg-4 col-md-6 mt-4" *ngFor="let trip of trips">
+          <div class="card" style="width: 100%">
+            <img src="{{ trip.image }}" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">{{ trip.name }}</h5>
+              <p class="card-text">
+                {{ trip.description | slice : 0 : 80 }}...
+              </p>
+              <div class="btnss d-flex justify-content-around">
+                <a
+                  routerLink="/admin/trips/edit/{{ trip.id }}"
+                  class="btn btn-primary col-4 edit"
+                  >Edit</a
+                >
+                <a
+                  (click)="remove(trip.id)"
+                  class="btn btn-primary col-4 delete"
+                  >Delete</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
